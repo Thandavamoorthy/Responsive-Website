@@ -375,7 +375,7 @@ header .menu .menu-items ul li a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-left: 40%;
+    padding-left: 20%;
   }
 
   header .nav .search {
@@ -400,5 +400,19 @@ header .menu .menu-items ul li a {
 
   header .menu {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 458px) {
+  header {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 10%;
   }
 }
