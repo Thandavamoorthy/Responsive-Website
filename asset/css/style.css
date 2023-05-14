@@ -1,0 +1,403 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Lobster:regular);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vw;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: relative;
+}
+
+header .logo {
+  width: max-content;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header .logo .logo-img {
+  width: 100px;
+  height: 100%;
+}
+
+header .logo p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-left: 10px;
+  line-height: 25px;
+  font-family: "Lobster", sans-serif !important;
+  letter-spacing: 1px;
+  color: blueviolet;
+}
+
+header .logo p span {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: crimson;
+  font-family: "Lobster", sans-serif !important;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header ul {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 0 16px;
+  position: relative;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header ul li a:hover {
+  color: crimson;
+}
+
+header ul li::after {
+  content: "";
+  height: 2.5px;
+  width: 0;
+  background-color: blueviolet;
+  position: absolute;
+  left: 16px;
+  top: 25px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+header ul li:hover::after {
+  width: calc(100% - 32px);
+}
+
+header .search {
+  padding: 0 16px;
+  position: relative;
+}
+
+header .search input {
+  padding: 5px 40px 5px 15px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+header .search input::placeholder {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+header .search input:focus {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+header .search i {
+  position: absolute;
+  right: 27px;
+  top: 9.5px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header .search i:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+header .user {
+  display: flex;
+  padding: 0 10px;
+}
+
+header .user .user-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+header .user .user-btn:nth-child(1) {
+  margin-right: 10px;
+}
+
+header button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+header button i {
+  padding-left: 2px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+header .user .user-btn:hover {
+  border: 2px solid blueviolet;
+  color: #fff;
+}
+
+header .user .user-btn:hover i,
+header .user .user-btn:hover button {
+  color: blueviolet;
+}
+
+header .menu-btn {
+  font-size: 1.5rem;
+  display: none;
+  flex-direction: column;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+header .menu.toggle {
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  padding: 0 50px;
+  transition: 0.3s;
+}
+
+header .menu .menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .menu .search {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+header .menu .search input {
+  width: 100%;
+  padding: 7px 35px 7px 20px;
+}
+
+header .menu .search i {
+  right: 20px;
+  top: 13px;
+}
+
+header .menu ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+header .menu .menu-items ul li {
+  padding: 20px 0;
+}
+
+header .menu .menu-items ul li::after {
+  height: 2.5px;
+  width: 0;
+  left: 0;
+  top: 55px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+header .menu .menu-items ul li:hover::after {
+  width: 100%;
+}
+
+header .menu .menu-items ul li a{
+    font-size: 1.5rem;
+}
+
+
+
+
+@media only screen and (max-width: 1400px) {
+  header nav ul li {
+    padding: 0 16px;
+  }
+
+  header .search input {
+    width: 200px;
+    padding: 5px 40px 5px 15px;
+  }
+}
+
+@media only screen and (max-width: 1268px) {
+  header nav ul li {
+    padding: 0 12px;
+  }
+
+  header .search {
+    padding: 0 8px;
+  }
+
+  header .search input {
+    width: 170px;
+    padding: 5px 40px 5px 15px;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  header nav ul li {
+    padding: 0 9px;
+  }
+
+  header .search {
+    padding: 0 4px;
+  }
+
+  header .search input {
+    width: 130px;
+    padding: 5px 40px 5px 15px;
+  }
+
+  header .user {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  header .logo .logo-img {
+    width: 70px;
+    height: 80%;
+  }
+
+  header .logo p {
+    font-size: 1.2rem;
+  }
+
+  header .logo p span {
+    font-size: 1.5rem;
+  }
+
+  header .user .user-btn:nth-child(1) {
+    margin-right: 0;
+  }
+
+  header .user .user-btn button span {
+    display: none;
+  }
+
+  header .user .user-btn:hover {
+    border: none;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  header .user .user-btn:hover i,
+  header .user .user-btn:hover button {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media only screen and (max-width: 928px) {
+  header {
+    padding: 0 30px;
+  }
+
+  header .logo p {
+    font-size: 1rem;
+  }
+
+  header .logo p span {
+    font-size: 1.2rem;
+  }
+
+  header nav ul li {
+    padding: 0 6px;
+  }
+
+  header ul li a {
+    font-size: 0.9rem;
+  }
+
+  header .search {
+    padding: 0 6px;
+  }
+
+  header .search input {
+    padding: 5px 20px 5px 8px;
+  }
+
+  header .user .user-btn {
+    padding: 5px;
+  }
+
+  header .search i {
+    right: 17px;
+    top: 9.5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 50px;
+    justify-content: space-between;
+  }
+
+  header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 40%;
+  }
+
+  header .nav .search {
+    display: none;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header .user .user-btn:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  header .user .user-btn i {
+    font-size: 1.2rem;
+  }
+
+  header .menu-btn {
+    display: block;
+  }
+
+  header .menu{
+    display: none;
+  }
+}
