@@ -187,6 +187,10 @@ header .menu-btn {
   cursor: pointer;
 }
 
+header .menu {
+  display: none;
+}
+
 header .menu.toggle {
   display: block;
   width: 100%;
@@ -240,12 +244,9 @@ header .menu .menu-items ul li:hover::after {
   width: 100%;
 }
 
-header .menu .menu-items ul li a{
-    font-size: 1.5rem;
+header .menu .menu-items ul li a {
+  font-size: 1.5rem;
 }
-
-
-
 
 @media only screen and (max-width: 1400px) {
   header nav ul li {
@@ -397,7 +398,7 @@ header .menu .menu-items ul li a{
     display: block;
   }
 
-  header .menu{
+  header .menu {
     display: none;
   }
 }
